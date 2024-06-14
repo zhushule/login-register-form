@@ -6,7 +6,7 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
@@ -14,7 +14,7 @@ export const Register = (props) => {
 
     const handleDownload = () => {
         const file = new Blob([ name,'\t', email ], { type: 'text/plain;charset=utf-8' });
-        saveAs(file, 'RegisterInfo.txt');
+        saveAs(file, 'Register.txt');
     }
 
     return (
